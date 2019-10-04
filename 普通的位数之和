@@ -1,0 +1,27 @@
+package chapter3;
+
+import java.util.Scanner;
+
+public class Free_play {
+    
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		int num = input.nextInt();
+		int [] a = new int [20];
+		int i = 1;
+		int sum = 0;
+		a[0] = num % 10;
+		if (a[0] == num) {
+		    num = 0;
+		    }
+		while (num != 0) {
+			a[i] = num / 10 % 10;
+			num = num / 10;
+			i++;
+		}
+		for (int j = 0 ;j <= i; j++) {
+			sum = sum + a[j];
+		}
+		System.out.println("合为" + sum);
+		}
+}
